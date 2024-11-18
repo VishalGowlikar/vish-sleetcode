@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let  nums = [1,1,2]
+        
+var removeDuplicates = function(nums) {
+    for(i=0; i < nums.length ; i++){
+        for (j = i+ 1; j<nums.length; j++){
+            if(nums[i] == nums[j]){
+                nums[j] = '_';
+
+
+            }
+        }
+    }
+    nums.sort((a, b) => (a === '_' ? 1 : b === '_' ? -1 : a - b));
+    return nums;
+};
+removeDuplicates(nums)
+console.log(nums);
+    </script>
+</body>
+</html>
